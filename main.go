@@ -5,10 +5,6 @@ import (
 	"github.com/wailsapp/wails"
 )
 
-func basic() string {
-	return "Hello World!"
-}
-
 func main() {
 
 	js := mewn.String("./frontend/dist/app.js")
@@ -23,6 +19,5 @@ func main() {
 		CSS:       css,
 		Colour:    "#131313",
 	})
-	app.Bind(basic)
 	app.Run()
 }

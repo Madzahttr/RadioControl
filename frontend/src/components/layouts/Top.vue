@@ -1,11 +1,11 @@
 <template>
-    <div>
-        <h1>Hello World</h1>
+    <div class="layoutTop">
+        <h1>Top</h1>
     </div>
 </template>
 
 <script>
 export default {
-    name: "Header"
+    name: "Top"
 }
 </script>

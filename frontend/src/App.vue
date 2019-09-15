@@ -1,17 +1,26 @@
 <template>
     <div id="app">
-        <Header />
+        <Top />
+        <Middle />
+        <Bottom />
+        <Controls />
     </div>
 </template>
 
 <script>
 import './assets/css/main.css'
-import Header from './components/layouts/Header'
+import Top from './components/layouts/Top'
+import Middle from './components/layouts/Middle'
+import Bottom from './components/layouts/Bottom'
+import Controls from './components/layouts/Controls'
 
 export default {
     name: "app",
     components: {
-        Header
+        Top,
+        Middle,
+        Bottom,
+        Controls
     }
 };
 </script>
