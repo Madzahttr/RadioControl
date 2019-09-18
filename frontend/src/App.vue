@@ -3,7 +3,7 @@
         <Top />
         <Middle />
         <Bottom />
-        <Controls />
+        <Controls v-bind:currentSong="currentSong" />
     </div>
 </template>
 
@@ -21,6 +21,17 @@ export default {
         Middle,
         Bottom,
         Controls
+    },
+    data() {
+        return {
+            currentSong: {
+                name: "Africa",
+                artist: "Toto",
+                album: "Toto IV",
+                releaseYear: "1982",
+                genre: "Classic Rock"
+            }
+        }
     }
 };
 </script>

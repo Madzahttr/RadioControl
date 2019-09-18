@@ -62,4 +62,24 @@ body,
 .layoutControls {
 	height: 100px;
 	background: rgb(30, 30, 30);
+	display: flex;
+	flex-direction: row;
+}
+
+.controlsContainer {
+	padding: 20px;
+	height: 100%;
+	align-content: center;
+}
+
+.playerControls {
+	width: 300px;
+}
+
+.songInfo {
+	flex-grow: 1;
+}
+
+.playerOptions {
+	width: 300px;
 }

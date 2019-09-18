@@ -1,11 +1,23 @@
 <template>
     <div class="layoutControls">
-        <h1>Controls</h1>
+        <PlayerControls />
+        <SongInfo v-bind:currentSong="currentSong" />
+        <PlayerOptions />
     </div>
 </template>
 
 <script>
+import PlayerControls from '../PlayerControls'
+import SongInfo from '../SongInfo'
+import PlayerOptions from '../PlayerOptions'
+
 export default {
-    name: "Controls"
+    name: "Controls",
+    components: {
+        PlayerControls,
+        SongInfo,
+        PlayerOptions
+    },
+    props: ['currentSong']
 }
 </script>
