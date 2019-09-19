@@ -6,19 +6,29 @@
                     <button class="controlButtonRestart"></button>
                 </div>
                 <div class="controlPlay">
-                    <button class="controlButtonPlay"></button>
+                    <button class="controlButtonPlay" v-on:click.prevent="play"></button>
                 </div>
                 <div class="controlStop">
-                    <button class="controlButtonStop"></button>
+                    <button class="controlButtonStop" v-on:click.prevent="stop"></button>
                 </div>
             </div>
         </div>
+        
     </div>
 </template>
 
 <script>
 export default {
-    name: "PlayerControls"
+    name: "PlayerControls",
+    props: ['player'],
+    methods: {
+        stop() {
+            this.$emit('stop')
+        },
+        play() {
+            this.$emit('play')
+        }
+    }
 }
 </script>
 
