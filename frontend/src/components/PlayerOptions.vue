@@ -3,7 +3,7 @@
         <div class="controlsContainer">
             <div class="buttons">
                 <div class="playTime">
-                    <span class="playTimeSpan">0:00 / 4:20</span>
+                    <div class="playTimeSpan">{{ this.currentTime }} / {{ this.durationTime }}</div>
                 </div>
                 <div class="settings">
                     <button class="buttonSettings"></button>
@@ -15,7 +15,8 @@
 
 <script>
 export default {
-    name: "PlayerOptions"
+    name: "PlayerOptions",
+    props: ['currentTime', 'durationTime']
 }
 </script>
 
@@ -27,10 +28,19 @@ export default {
     justify-content: center;
 }
 
-.play
+.playTime {
+    height: 30px;
+}
 
 .playTimeSpan {
     height: 30px;
+    font-size: 18px;
+    padding-top: 5px;
+    padding-bottom: 7px;
+    padding-left: 5px;
+    padding-right: 20px;
+    color: rgb(200, 200, 200);
+    text-align: center;
 }
 
 .buttonSettings {
